@@ -101,6 +101,15 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-size: 12px;
   animation: pulse-badge 2s infinite;
 }
+.promo-text-mobile { display: none; }
+@media (max-width: 480px) {
+  .promo-text-desktop { display: none; }
+  .promo-text-mobile { display: inline; }
+  .promo-banner { padding: 6px 0; font-size: 12px; }
+  .banner-container { gap: 8px; }
+  .promo-icon svg { width: 12px; height: 12px; }
+}
+
 
 /* ---- Header ---- */
 .site-header {
@@ -287,6 +296,12 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: auto;
+    padding: 20px 0 16px;
+  }
+}
 .hero-section::before {
   content: '';
   position: absolute;
@@ -402,6 +417,16 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   object-fit: cover;
   box-shadow: var(--shadow-2xl);
   max-height: 580px;
+}
+@media (max-width: 480px) {
+  .hero-img {
+    max-height: none;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 .floating-card {
