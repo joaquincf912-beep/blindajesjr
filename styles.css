@@ -1233,10 +1233,10 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 @media (max-width: 1024px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
   .hero-visual { order: -1; }
-  .hero-img { max-height: 400px; }
+  .hero-img { max-height: 350px; }
   .floating-card { left: 16px; bottom: 16px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .problem-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1246,56 +1246,231 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .main-nav, .header-cta { display: none; }
   .mobile-menu-toggle { display: flex; }
   
-  .stats-container { grid-template-columns: repeat(2, 1fr); }
-  .steps-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .steps-grid::before { display: none; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .footer-container { grid-template-columns: 1fr; gap: 36px; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .schedule-grid { grid-template-columns: repeat(2, 1fr); }
-  
-  .section-header { margin-bottom: 48px; }
+  /* Compact all sections */
   .problem-section, .services-section, .experience-section,
   .gallery-section, .booking-section, .testimonials-section,
-  .faq-section { padding: 72px 0; }
+  .faq-section { padding: 48px 0; }
+  
+  .section-header { margin-bottom: 32px; }
+  .section-header h2 { font-size: 28px; }
+  .section-subtitle { font-size: 15px; }
+  
+  .stats-bar { padding: 32px 0; }
+  .stats-container { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .stat-number, .stat-suffix { font-size: 32px; }
+  .stat-label { font-size: 11px; margin-top: 4px; }
+  
+  .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .steps-grid::before { display: none; }
+  .step-card { padding: 20px 12px; }
+  .step-icon { width: 56px; height: 56px; margin-bottom: 12px; }
+  .step-title { font-size: 16px; margin-bottom: 6px; }
+  .step-desc { font-size: 13px; }
+  
+  .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
+  .testimonial-card { padding: 24px; }
+  
+  .footer-container { grid-template-columns: 1fr; gap: 28px; }
+  .site-footer { padding: 48px 0 0; }
+  .footer-bottom { margin-top: 32px; }
+  
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .schedule-grid { grid-template-columns: repeat(2, 1fr); }
+  
+  .problem-card { padding: 24px 20px; }
+  .problem-title { font-size: 17px; }
+  .problem-desc { font-size: 14px; }
+  
+  .service-img { height: 160px; }
+  .service-content { padding: 20px; }
+  .service-title { font-size: 18px; }
+  .service-desc { font-size: 14px; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .hero-section { padding: 40px 0; }
-  .hero-section h1 { font-size: 32px; }
-  .hero-subtitle { font-size: 16px; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions .btn { width: 100%; justify-content: center; }
   
-  .services-grid,
-  .problem-grid { grid-template-columns: 1fr; }
-  .steps-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .widget-services-grid { grid-template-columns: 1fr; }
-  .schedule-grid { grid-template-columns: 1fr; }
+  /* Promo banner compact */
+  .promo-banner { padding: 8px 0; font-size: 12px; }
+  .promo-badge { font-size: 11px; padding: 2px 8px; }
   
-  .booking-widget { padding: 28px 20px; }
-  .stats-container { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .stat-number, .stat-suffix { font-size: 32px; }
+  /* Header compact */
+  .header-container { padding: 8px 16px; }
+  .logo-img { height: 36px; }
+  .logo-name { font-size: 17px; }
+  .logo-tagline { font-size: 10px; letter-spacing: 1px; }
   
+  /* Hero ultra-compact */
+  .hero-section { 
+    padding: 20px 0 16px; 
+    min-height: auto;
+  }
+  .hero-container { gap: 20px; }
+  .hero-visual { order: -1; }
+  .hero-img { 
+    max-height: 220px; 
+    border-radius: var(--radius-md);
+  }
+  .trust-badge { 
+    font-size: 12px; 
+    padding: 5px 12px; 
+    margin-bottom: 12px; 
+  }
+  .hero-section h1 { 
+    font-size: 26px; 
+    margin-bottom: 10px;
+    line-height: 1.15;
+  }
+  .hero-subtitle { 
+    font-size: 14px; 
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+  .hero-benefits { 
+    margin: 16px 0 20px; 
+    gap: 8px;
+  }
+  .benefit-item { font-size: 13px; gap: 8px; }
+  .benefit-item::before { width: 20px; height: 20px; font-size: 10px; }
+  .hero-actions { 
+    flex-direction: column; 
+    gap: 10px;
+  }
+  .hero-actions .btn { 
+    width: 100%; 
+    justify-content: center; 
+  }
+  .btn-lg { padding: 14px 24px; font-size: 15px; }
+  .floating-card { display: none; }
+  
+  /* Stats compact */
+  .stats-bar { padding: 24px 0; }
+  .stats-container { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px; 
+  }
+  .stat-item { padding: 4px; }
+  .stat-number, .stat-suffix { font-size: 28px; }
+  .stat-label { font-size: 10px; letter-spacing: 1px; margin-top: 2px; }
+  
+  /* All sections compact */
+  .problem-section, .services-section, .experience-section,
+  .gallery-section, .booking-section, .testimonials-section,
+  .faq-section { padding: 36px 0; }
+  
+  .section-header { margin-bottom: 24px; }
+  .section-header h2 { font-size: 24px; margin-bottom: 8px; }
+  .section-subtitle { font-size: 14px; }
+  
+  /* Problem cards compact */
+  .problem-grid { grid-template-columns: 1fr; gap: 12px; }
+  .problem-card { padding: 20px 16px; }
+  .problem-icon { margin-bottom: 12px; }
+  .problem-title { font-size: 16px; margin-bottom: 6px; }
+  .problem-desc { font-size: 13px; }
+  
+  /* Services compact */
+  .services-grid { grid-template-columns: 1fr; gap: 16px; }
+  .service-card { display: flex; flex-direction: row; }
+  .service-img-wrapper { width: 120px; flex-shrink: 0; }
+  .service-img { 
+    width: 120px; 
+    height: 100%; 
+    min-height: 140px;
+  }
+  .service-content { padding: 16px; flex: 1; }
+  .service-badge { font-size: 10px; padding: 3px 10px; margin-bottom: 8px; }
+  .service-title { font-size: 16px; margin-bottom: 6px; }
+  .service-desc { font-size: 13px; margin-bottom: 10px; line-height: 1.4; }
+  
+  /* Steps compact */
+  .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .step-card { padding: 16px 10px; }
+  .step-icon { width: 48px; height: 48px; margin-bottom: 10px; }
+  .step-number-label { font-size: 10px; margin-bottom: 6px; }
+  .step-title { font-size: 14px; margin-bottom: 4px; }
+  .step-desc { font-size: 12px; }
+  
+  /* Gallery compact - 2 cols */
+  .gallery-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 6px; 
+  }
+  .gallery-item { aspect-ratio: 1/1; border-radius: 8px; }
+  
+  /* Booking widget compact */
+  .booking-widget { padding: 24px 16px; }
+  .widget-step { margin-bottom: 24px; }
+  .widget-step h3 { font-size: 17px; margin: 10px 0; }
+  .widget-services-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .widget-service-btn { padding: 12px; gap: 4px; }
+  .ws-name { font-size: 13px; }
+  .ws-price { font-size: 12px; }
+  .schedule-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .schedule-btn { padding: 10px 12px; font-size: 13px; }
+  .booking-summary-card { padding: 20px 16px; margin-top: 16px; }
+  .booking-summary-card h4 { font-size: 16px; margin-bottom: 10px; }
+  .summary-row { font-size: 14px; padding: 8px 0; }
+  
+  /* Testimonials compact */
+  .testimonials-grid { gap: 12px; }
+  .testimonial-card { padding: 20px; gap: 14px; }
+  .testimonial-stars { font-size: 15px; }
+  .testimonial-text { font-size: 14px; line-height: 1.5; }
+  .testimonial-author { gap: 10px; padding-top: 12px; }
+  .author-avatar { width: 40px; height: 40px; font-size: 14px; }
+  .author-name { font-size: 14px; }
+  .author-date { font-size: 12px; }
+  .google-rating-badge { padding: 8px 16px; margin-top: 16px; }
+  
+  /* FAQ compact */
+  .faq-question { padding: 16px 20px; font-size: 14px; gap: 12px; }
+  .faq-item { margin-bottom: 8px; }
+  .faq-item.active .faq-answer { padding: 0 20px 16px; }
+  .faq-answer p { font-size: 13px; }
+  
+  /* Footer compact */
+  .site-footer { padding: 36px 0 0; }
+  .footer-logo-img { height: 48px; }
+  .footer-brand .logo-name { font-size: 20px; }
+  .footer-desc { font-size: 14px; }
+  .footer-contact h3, .footer-hours h3 { font-size: 16px; margin-bottom: 12px; }
+  .footer-contact p { font-size: 14px; }
+  .footer-hours li { font-size: 13px; padding: 8px 0; }
+  .footer-bottom { margin-top: 24px; padding: 20px 16px; }
+  .footer-bottom p { font-size: 13px; }
+  
+  /* WhatsApp button compact */
   .whatsapp-float {
     bottom: 16px;
     right: 16px;
-    padding: 12px 18px;
+    padding: 12px 16px;
+    font-size: 14px;
   }
   .whatsapp-text { display: none; }
   
+  /* Toast compact */
   .social-proof-toast { 
-    left: 12px;
-    right: 12px;
+    left: 10px;
+    right: 10px;
     max-width: none;
-    bottom: 80px;
+    bottom: 76px;
+    padding: 12px 14px;
+    gap: 10px;
   }
-  
-  .floating-card { display: none; }
+  .toast-avatar-photo { width: 36px; height: 36px; }
+  .toast-text-line { font-size: 12px; }
+  .toast-subtext-line { font-size: 12px; }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .hero-section h1 { font-size: 22px; }
+  .hero-subtitle { font-size: 13px; }
+  .stat-number, .stat-suffix { font-size: 24px; }
+  .section-header h2 { font-size: 20px; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .widget-services-grid { grid-template-columns: 1fr; }
 }
 
 /* ---- Reduced Motion ---- */
@@ -1314,3 +1489,4 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
     transform: none;
   }
 }
+
